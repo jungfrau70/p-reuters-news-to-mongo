@@ -65,7 +65,7 @@ today = now.strftime("%m_%d_%Y")
 filename = "./" + "Reuters_News_URLs_" + topic + "_" + today + ".csv"
 output_filename = "./" + "Reuters_News_" + topic + "_" + today + ".csv"
 
-def get_stores(urls):
+def get_news(urls):
 
     threads = min(MAX_THREADS, len(urls))
 
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     df_URL = pd.read_csv(filename)
     urls = df_URL.values.tolist()
 
-    get_stores(urls)
+    get_news(urls)
     t1 = time.time()
     print(f"{t1 - t0} seconds to get {len(urls)} stores.")
 

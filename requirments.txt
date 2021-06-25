@@ -1,5 +1,7 @@
 beautifulsoup4
 lxml
+pymongo
+pymongo[srv]
 requests
 selenium
 pandas
